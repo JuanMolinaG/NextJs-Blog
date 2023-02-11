@@ -1,6 +1,6 @@
-import Date from "../../components/date";
-import Head from "next/head";
-import Layout from "../../components/layout";
+import Date from '../../components/date';
+import Head from 'next/head';
+import Layout from '../../components/layout';
 
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
@@ -12,8 +12,8 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       postData,
-    }
-  }
+    },
+  };
 }
 
 export async function getStaticPaths() {
@@ -39,5 +39,5 @@ export default function Post({ postData }) {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
-  )
+  );
 }
